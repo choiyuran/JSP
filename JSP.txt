@@ -1,0 +1,60 @@
+JSP 개발환경 준비
+
+1) 자바 (1.8) 
+C:\> java -version
+C:\> javac -version
+[환경변수 (sysdm.cpl)]
+추가
+변수이름 : JAVA_HOME
+변수 값 : C:\Program Files\java\jdk1.8.0_361
+
+
+2) 아파치 톰캣 (8.5.xx)
+
+https://tomcat.apache.org/
+download - Tomcat 8 - Core - zip
+다운받은 압축파일을 해제하고
+톰캣 경로를 환경변수에 등록
+[환경변수 (sysdm.cpl)]
+추가
+변수 이름 : CATALINA_HOME
+변수 값 : D:\취업반\apache-tomcat-8.5.xx
+
+편집
+변수 이름 : Path
+항목 : %CATALINA_HOME%\bin
+(apache-tomcat-8.5.91까지의 위치가 변수 값)
+=> 등록 후 확인은 cmd창에서 catalina start 치면 정상 작동(구글에서 localhost:8080)
+
+3) 이클립스 J2EE (2019-06R) -> 톱니바퀴 첫번째꺼
+google - eclipse 2019-06r - Enterprise
+압축 해제
+옆에 workspace로 사용할 새 폴더 생성
+실행 파일의 단축 아이콘을 바탕화면에 생성(alt + 드래그)
+최초 실행 시 워크스페이스의 경로를 위에서 생성한 폴더로 지정
+항상 이 위치를 기본값으로 실행합니다에 체크하기
+
+[환경설정]
+Menu - Window - Preferences
+
+General - Web Browser - use external web browser 
+General - workspace - Text file encoding(Other:UTF-8)
+
+Server - Runtime Environments - Add
+	Apache Tomcat 8.5
+	톰캣 설치 경로를 폴더로 지정(bin이 보이는 자리/bin까지 들어가지 말고)
+
+Web - 	CSS Files		- UTF-8
+	HTML Files		- UTF-8
+	JSP Files		- UTF-8
+
+
+4) Oracle Database 21c & SQLDeveloper
+
+
+======================================================================
+tomcat 압축 해제 후 bin에서 startup.bat 클릭
+구글 창에서 localhost:8080을 검색 페이지가 나오는지 확인
+
+페이지가 안나올시 -> startup.bat 파일이 있는 위치에서 cmd실행 후 startup.bat를 친다(오류 원인 확인)
+appwiz.cpl에 들어가서 apache가 있는지 확인하고 있으면 제거
