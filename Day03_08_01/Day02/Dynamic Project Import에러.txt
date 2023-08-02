@@ -1,0 +1,4 @@
+1. alt + enter
+2. Java Build Path
+3. Libraries - JRE System Library(unbounded확인하기)
+4. Edit에서 세번째 Workspace default JRE선택
