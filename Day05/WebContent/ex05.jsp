@@ -20,7 +20,7 @@
 	${not empty param.name ? '님' : ''}
 </h3>
 
-<h3> <%-- 빈 문자도 값으로 취급 --%>
+<h3> <%-- 표현식은 빈 문자도 값으로 취급 --%>
 	안녕하세요. 
 	<%=request.getParameter("name") != null ? request.getParameter("name") : "" %>
 	<%=request.getParameter("name") != null ? "님" : "" %>

@@ -56,7 +56,7 @@
 
 <fieldset>
 	<legend>문자열 덧셈은 불가능</legend>
-	<h3>${'1104' }${"a" }</h3>
+	<h3>${'1104' }${'a'}</h3>
 </fieldset>
 <br>
 <table>
