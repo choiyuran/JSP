@@ -1,0 +1,19 @@
+
+DROP TABLE YOUTUBE PURGE;
+
+  CREATE TABLE YOUTUBE
+   (	IDX NUMBER, 
+	TITLE VARCHAR2(500), 
+	CHANNEL VARCHAR2(100), 
+	VIEWCOUNT NUMBER, 
+	THUMBNAIL VARCHAR2(500), 
+	MOVIETAG VARCHAR2(1000)
+   );
+
+SET DEFINE OFF;
+
+Insert into YOUTUBE (IDX,TITLE,CHANNEL,VIEWCOUNT,THUMBNAIL,MOVIETAG) values (4,'우리 남편은 어마어마해','싱글벙글',125628,'https://i.ytimg.com/vi/B3VVc2MhnCE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDHu9czOcEHbhUYYYLVLxhymxhHyg','<iframe width="644" height="362" src="https://www.youtube.com/embed/B3VVc2MhnCE" title="우리 남편은 어마어마해" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
+Insert into YOUTUBE (IDX,TITLE,CHANNEL,VIEWCOUNT,THUMBNAIL,MOVIETAG) values (1,'[날씨] 사상 초유 내륙 관통 태풍...내일∼모레 새벽 고비 / YTN','YTN',1234,'https://i.ytimg.com/vi/iW0vQ3O3S58/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCQRBeXItab03zDIwVeGp1jclCwow','<iframe width="800" height="450" src="https://www.youtube.com/embed/iW0vQ3O3S58" title="[날씨] 사상 초유 내륙 관통 태풍...내일∼모레 새벽 고비 / YTN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
+Insert into YOUTUBE (IDX,TITLE,CHANNEL,VIEWCOUNT,THUMBNAIL,MOVIETAG) values (2,'[밥묵자] 뭐 홍단? 내는 고도리다! 마! (feat. 쵸단)','꼰대희',1080000,'https://i.ytimg.com/vi/GJtmmopW2jA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDQm-pOBnIhL7YvMn0fhThuVXEXJg','<iframe width="800" height="450" src="https://www.youtube.com/embed/GJtmmopW2jA" title="[밥묵자] 뭐 홍단? 내는 고도리다! 마! (feat. 쵸단)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
+Insert into YOUTUBE (IDX,TITLE,CHANNEL,VIEWCOUNT,THUMBNAIL,MOVIETAG) values (3,'옆반에 호랑이 선생님이 새로 오셨다','빠더너스 DBNS',2060000,'https://i.ytimg.com/vi/Is6h6cxuEiI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDT0EFMA2b96c-zZa_smgFyt37ghQ','<iframe width="800" height="450" src="https://www.youtube.com/embed/Is6h6cxuEiI" title="옆반에 호랑이 선생님이 새로 오셨다" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
+commit;

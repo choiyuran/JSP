@@ -1,0 +1,13 @@
+
+
+주소(문서)	DAO			SQL
+
+index.jsp	-
+
+add.jsp		-
+
+add-action.jsp	dao.insert(dto)		insert into youtube values (...)
+
+view.jsp	dao.selectOne(idx)	select * ... where idx = ?
+
+list.jsp	dao.selectList()	select * from youtube order by idx
