@@ -1,0 +1,22 @@
+성적관리 프로그램
+
+학생 {
+	이름
+	국어
+	영어
+	수학
+	합계
+	평균
+}
+
+메뉴	주소		DAO 함수		SQL		응답
+===================================================================
+목록	list		selectList()	select *	-		
+추가	add		-		-		add-action
+	add-action	insert(dto)	insert into	redirect:/list
+조회	view		select(idx)	select * where	-
+검색	search		search(keyword)	select * where	-
+수정	modify		select(idx)	select * where	modify-action
+	modify-action	update(idx)	update set 	redirect:/list
+삭제	delete		delete(idx)	delete ...where	redirect:/list
+
