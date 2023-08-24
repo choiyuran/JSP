@@ -1,0 +1,62 @@
+--회원
+drop table member purge;
+
+create table member(
+userId      VARCHAR2(100)       primary key,
+userPw      VARCHAR2(100)       not null,
+username    VARCHAR2(100)       not null,
+email       VARCHAR2(100)       not null,
+birth       VARCHAR2(100)       not null
+);
+
+insert into member
+    values ('test', '1234', '테스트', 'test@itbank.com', '2000-01-02');   
+insert into member
+    values ('itbank', 'it', '아이티뱅크', 'admin@itbank.com', '1970-01-01');
+insert into member
+    values ('root', '1', '관리자', 'root@itbank.com', '1999-12-31');
+commit;
+
+select * from member;
+
+--게시판
+drop table board cascade constraints purge;
+drop sequence board_seq;
+
+create sequence board_seq
+	start with 1
+	maxvalue 9999999
+	increment by 1
+	nocycle
+	nocache;
+
+create table board(
+	idx	    	number			default board_seq.nextval primary key,
+	title		varchar2(500)		not null,
+	writer		varchar2(100)		not null,
+	content		clob			not null,
+	wdate		date			default sysdate,
+
+	constraint board_member_fk
+	foreign key(writer)
+	references member(userid)
+);
+
+-------------------------------------------------------------------------------------------------------------------------------
+		주소				dao함수		SQL			응답
+-------------------------------------------------------------------------------------------------------------------------------
+ 회원		* 주소와 응답이 합쳐지면 request
+ 가입화면		member/join.jsp			-		-			[회원가입 입력 화면]
+ 가입처리		member/join-action.jsp		join(user)	insert into...		redirect:/member/login.jsp
+ 로그인화면		member/login.jsp		-		-			[로그인 입력 화면]
+ 로그인처리		member/login-action.jsp		login(user)	select * from... 	c:set var="login" value="..." scope="session"
+											redirect:/
+ 게시글
+ 목록 		board/list.jsp			selectList()	select * from... 	[게시글 목록]
+ 쓰기화면		board/write.jsp			-		-			[게시글 작성 입력 화면]
+ 쓰기처리		board/write-action.jsp		write(dto)	insert into...		redirect:/board/list.jsp
+ 단일조회		board/view.jsp			selectOne(idx)	select * from...	[게시글 내용 출력]
+ 요소삭제		board/delect.jsp		delect(idx)	delect board where...	redirect:/board/list.jsp
+ 수정화면		board/modify.jsp		selectOne(idx)  select * from...	[게시글 수정 입력 화면]
+ 수정처리		board.modify-action.jsp		modify(dto)	update board set..	redirect:/board/view.jsp?idx=1
+
