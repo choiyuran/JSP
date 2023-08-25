@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+th, td {
+	border: 1px solid grey;
+	padding: 15px;
+}
+h1 {
+	margin-left: 30px;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	color: fuchsia;
+}
+ul {
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	background-color: black;
+	color: white;
+}
+.header {
+	width: 1300px;
+	margin: 5px auto;
+	background-color: #dadada;
+}
+
+ul > li {
+	padding: 15px;	
+}
+ul > li:last-child {
+	margin-right: 30px;
+}
+.login {
+	margin-left: 20px;
+	background-color: white;
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	text-align: center;
+}
+h3 {
+	margin-top: 5px;
+}
