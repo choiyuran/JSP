@@ -1,0 +1,6 @@
+주소			메서드		기능			jsp
+ex05			GET		게시글 목록			list.jsp
+ex05/write		GET		작성 화면			write.jsp
+ex05/write		POST		작성 기능			redirect:/ex05
+ex05/delete		GET		삭제			redirect:/ex05	
+ex05/view		GET		조회			view.jsp		
