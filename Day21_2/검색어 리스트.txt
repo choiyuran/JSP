@@ -1,0 +1,12 @@
+<form>
+	<p><input type="search" name="search" placeholder="검색어를 입력하세요" list="keywordList"></p>
+	<details id="keywordList">
+		<c:forEach var="album" items="${list}">
+			<option>${album.name}</option>
+		</c:forEach>
+	</details>
+</form>
+
+======================================================================================
+input에 있는 list의 값과 details에 있는 id의 값을 맞춰주고 option으로 값을 지정해주면
+검색할 때 키워드가 포함되어 있는 것들을 자동완성?느낌으로 보여준다
